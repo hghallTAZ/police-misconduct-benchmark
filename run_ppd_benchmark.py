@@ -39,18 +39,18 @@ class GroundTruth:
 
 
 def load_ground_truth(csv_path: str) -> Dict[str, GroundTruth]:
-    """Load ground truth labels keyed by filename."""
+    """Load ground truth labels keyed by filename. Handles both PPD and CPD formats."""
     gt = {}
     with open(csv_path) as f:
         reader = csv.DictReader(f)
         for row in reader:
             gt[row["filename"]] = GroundTruth(
                 filename=row["filename"],
-                classification=row["classification"],
+                classification=row.get("classification", row.get("label", "")),
                 tier=int(row["tier"]),
-                label=row["label"],
+                label=row.get("label", ""),
                 reasons=row.get("reasons", ""),
-                has_sustained=row["has_sustained"] == "True",
+                has_sustained=row.get("has_sustained", "False") == "True",
             )
     return gt
 
@@ -113,6 +113,17 @@ BRADY_QUERIES = [
         "name": "impeachment_material",
         "query": "credibility impeachment misconduct Brady Giglio",
         "description": "Direct impeachment/Brady/Giglio terminology",
+    },
+    # CPD-specific terminology
+    {
+        "name": "illegal_arrest",
+        "query": "illegal arrest false arrest",
+        "description": "CPD illegal/false arrest allegations",
+    },
+    {
+        "name": "perjury_false_report",
+        "query": "perjury false report false statement official misconduct",
+        "description": "CPD perjury and false reporting",
     },
 ]
 
