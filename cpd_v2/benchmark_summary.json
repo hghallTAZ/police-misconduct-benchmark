@@ -1,0 +1,34 @@
+{
+  "benchmark": "CPD Brady/Giglio Benchmark v2",
+  "built_at": "2026-03-15T15:34:31.256909",
+  "source": "Chicago Police Department via COPA (Civilian Office of Police Accountability)",
+  "framing": "Structured classification benchmark \u2014 synthetic documents from real IA data",
+  "limitation": "No narrative text in source data. Documents are generated from structured fields. Tests AI classification, not text retrieval.",
+  "total_documents": 10000,
+  "positive_documents": 2210,
+  "positive_rate": 22.1,
+  "tier_distribution": {
+    "brady_weak": 1641,
+    "brady_adjacent": 59,
+    "negative": 7790,
+    "strong_giglio": 8,
+    "giglio_relevant": 502
+  },
+  "label_rules": {
+    "tier_1_strong_giglio": "False arrest/report/perjury/falsification WITH sustained finding",
+    "tier_2_giglio_relevant": "False arrest/report/perjury/falsification (any finding)",
+    "tier_3_brady_adjacent": "Excessive force/civil rights WITH sustained finding",
+    "tier_4_brady_weak": "Excessive force/civil rights (any finding)",
+    "tier_0_negative": "Everything else"
+  },
+  "finding_codes": {
+    "SU": "Sustained",
+    "NS": "Not Sustained",
+    "UN": "Unfounded",
+    "NAF": "No Affidavit",
+    "EX": "Exonerated",
+    "AC": "Administratively Closed",
+    "DIS": "Discharged",
+    "NC": "No Cooperation"
+  }
+}

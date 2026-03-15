@@ -1,0 +1,7 @@
+# Generated document corpora (regenerate with builder scripts)
+ppd_v1/documents/
+cpd_v2/documents/
+
+# macOS
+.DS_Store
+__MACOSX/

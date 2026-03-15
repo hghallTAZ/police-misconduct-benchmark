@@ -1,0 +1,27 @@
+{
+  "benchmark": "PPD Brady/Giglio Benchmark v1",
+  "built_at": "2026-03-15T15:32:09.755047",
+  "source": "Philadelphia Police Department Complaints + Disciplines (2020-present)",
+  "framing": "Giglio/impeachment benchmark with Brady-adjacent supplements",
+  "limitation": "Proxy labels are NOT legal Brady determinations. They are algorithmic heuristics based on allegation type + investigative finding.",
+  "total_documents": 3618,
+  "positive_documents": 436,
+  "positive_rate": 12.1,
+  "tier_distribution": {
+    "tier_0_negative": 3182,
+    "tier_1_strong_giglio": 60,
+    "tier_2_giglio_relevant": 113,
+    "tier_3_brady_adjacent": 263
+  },
+  "label_rules": {
+    "tier_1_strong_giglio": "Falsification or Criminal allegation WITH sustained finding",
+    "tier_2_giglio_relevant": "Falsification or Criminal allegation (any finding)",
+    "tier_3_brady_adjacent": "Physical Abuse or Civil Rights with sustained finding",
+    "tier_0_negative": "Everything else"
+  },
+  "recommended_metrics": {
+    "primary": "Recall at tier >= 1 (must find all strong Giglio material)",
+    "secondary": "Recall at tier >= 2 (should find most impeachment-relevant material)",
+    "tertiary": "Precision at tier >= 2 (how much noise in the flagged set)"
+  }
+}
