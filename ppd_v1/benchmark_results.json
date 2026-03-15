@@ -1,0 +1,108 @@
+{
+  "benchmark": "PPD Brady/Giglio v1",
+  "timestamp": "2026-03-15T17:30:17Z",
+  "matter_id": "f14a3c10-c3db-4593-af1e-4452c5c3f13c",
+  "search_mode": "hybrid",
+  "limit_per_query": 500,
+  "queries_run": 10,
+  "total_docs": 3618,
+  "positive_docs": 436,
+  "recall": {
+    "tier1_strong_giglio": {
+      "found": 60,
+      "total": 60,
+      "rate": 1.0
+    },
+    "tier2_giglio_relevant": {
+      "found": 113,
+      "total": 113,
+      "rate": 1.0
+    },
+    "tier3_brady_adjacent": {
+      "found": 248,
+      "total": 263,
+      "rate": 0.943
+    },
+    "any_positive": {
+      "found": 421,
+      "total": 436,
+      "rate": 0.9656
+    }
+  },
+  "precision": 0.2309,
+  "false_positives": 1402,
+  "total_unique_hits": 1823,
+  "total_latency_ms": 10714.5,
+  "per_query": [
+    {
+      "name": "falsification_sustained",
+      "query": "falsification sustained finding",
+      "hits": 500,
+      "unique_filenames": 415,
+      "latency_ms": 955.4
+    },
+    {
+      "name": "criminal_allegation",
+      "query": "criminal allegation officer",
+      "hits": 500,
+      "unique_filenames": 433,
+      "latency_ms": 909.3
+    },
+    {
+      "name": "dishonesty",
+      "query": "dishonesty false statement lying",
+      "hits": 500,
+      "unique_filenames": 497,
+      "latency_ms": 1068.2
+    },
+    {
+      "name": "falsification_any",
+      "query": "falsification allegation investigated",
+      "hits": 500,
+      "unique_filenames": 444,
+      "latency_ms": 1109.6
+    },
+    {
+      "name": "criminal_conduct",
+      "query": "criminal conduct charge allegation",
+      "hits": 500,
+      "unique_filenames": 477,
+      "latency_ms": 1099.2
+    },
+    {
+      "name": "physical_abuse_sustained",
+      "query": "physical abuse sustained finding disciplinary",
+      "hits": 500,
+      "unique_filenames": 428,
+      "latency_ms": 1103.9
+    },
+    {
+      "name": "civil_rights_sustained",
+      "query": "civil rights complaint sustained finding",
+      "hits": 500,
+      "unique_filenames": 462,
+      "latency_ms": 1115.3
+    },
+    {
+      "name": "excessive_force",
+      "query": "excessive force physical abuse assault",
+      "hits": 500,
+      "unique_filenames": 482,
+      "latency_ms": 1175.5
+    },
+    {
+      "name": "sustained_discipline",
+      "query": "sustained finding suspension termination reprimand",
+      "hits": 500,
+      "unique_filenames": 406,
+      "latency_ms": 1091.6
+    },
+    {
+      "name": "impeachment_material",
+      "query": "credibility impeachment misconduct Brady Giglio",
+      "hits": 500,
+      "unique_filenames": 486,
+      "latency_ms": 1086.5
+    }
+  ]
+}
